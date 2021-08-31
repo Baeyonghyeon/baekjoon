@@ -8,7 +8,7 @@ public class baek_1181 {
 
         int cnt = Integer.parseInt(scan.nextLine());
         String ary[] = new String[cnt]; //입력받은 배열
-        ArrayList<String> arylsit = new ArrayList<>();
+        ArrayList<String> arylist = new ArrayList<>();
 
         for (int i = 0; i < cnt; i++) {
             ary[i] = scan.nextLine();
@@ -30,12 +30,12 @@ public class baek_1181 {
 
 
         for (String loop : ary){
-            if(!arylsit.contains(loop)){ // contatins를 활용해 Arraylist안에 중복값을 받지 않음
-                arylsit.add(loop);
+            if(!arylist.contains(loop)){ // contatins를 활용해 Arraylist안에 중복값을 받지 않음
+                arylist.add(loop);
             }
         }
 
-        for (String loop : arylsit){
+        for (String loop : arylist){
             String output = loop;
             System.out.println(output);
         }
