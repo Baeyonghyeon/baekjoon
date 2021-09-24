@@ -21,8 +21,8 @@ public class baek_15649 {
         N = Integer.parseInt(token[0]);
         M = Integer.parseInt(token[1]);
 
-        arr = new int[M];
-        visit = new boolean[N];
+        arr = new int[M]; // 2
+        visit = new boolean[N]; // 3
 
         // 정적변수를 쓰면 되기 때문에 굳이 N과 M을 넘겨줄 필요 없다.
         dfs(0);
@@ -30,23 +30,22 @@ public class baek_15649 {
 
     }
 
-    public static void dfs(int depth) {
-        if (depth == M) {
-            for (int val : arr) {
-                sb.append(val).append(' ');
+    public static void dfs(int depth){
+        if(depth == M){ //2
+            for(int loop : arr){
+                sb.append(loop).append(" ");
             }
-            sb.append('\n');
+            sb.append("\n");
             return;
         }
 
-        for (int i = 0; i < N; i++) {
-            if (!visit[i]) {
+        for (int i = 0; i<N; i++){ //3
+            if(!visit[i]){
                 visit[i] = true;
-                arr[depth] = i + 1;
-                dfs(depth + 1);
+                arr[depth] = i+1;
+                dfs(depth +1);
                 visit[i] = false;
             }
         }
     }
-
 }
