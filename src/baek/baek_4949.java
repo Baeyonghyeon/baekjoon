@@ -12,36 +12,49 @@ public class baek_4949 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine());
 
 
-        for (int i = 0; i < T; i++) {
+
+        while (true){
             String token = br.readLine();
+
+            if(token.equals(".")){
+                break;
+            }
             sb.append(parenthesis(token)).append("\n");
         }
+
 
         System.out.println(sb);
     }
 
-    public static String parenthesis(String token){
+    public static String parenthesis(String token) {
 
         stack.clear();
 
         for (int j = 0; j < token.length(); j++) {
-            if (token.charAt(j) == '(') {
+            if (token.charAt(j) == '(' || token.charAt(j) == '[') {
                 stack.add(token.charAt(j));
             } else if (token.charAt(j) == ')') {
-                if (stack.empty() == false) {
+                if (stack.empty() == false && stack.peek() == '(') {
                     stack.pop();
                 } else if (stack.empty() == true) {
                     return ("NO");
                 }
+            } else if (token.charAt(j) == ']') {
+                if (stack.empty() == false && stack.peek() == '[') {
+                    stack.pop();
+                } else if (stack.empty() == true) {
+                    return ("NO");
+                }
+            } else {
+                continue;
             }
         }
 
-        if (stack.empty()){
+        if (stack.empty()) {
             return "YES";
-        } else{
+        } else {
             return "NO";
         }
     }
