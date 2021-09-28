@@ -34,18 +34,18 @@ public class baek_4949 {
 
         for (int j = 0; j < token.length(); j++) {
             if (token.charAt(j) == '(' || token.charAt(j) == '[') {
-                stack.add(token.charAt(j));
+                stack.push(token.charAt(j));
             } else if (token.charAt(j) == ')') {
                 if (stack.empty() == false && stack.peek() == '(') {
                     stack.pop();
-                } else if (stack.empty() == true) {
-                    return ("NO");
+                } else {
+                    return ("no");
                 }
             } else if (token.charAt(j) == ']') {
                 if (stack.empty() == false && stack.peek() == '[') {
                     stack.pop();
-                } else if (stack.empty() == true) {
-                    return ("NO");
+                } else {
+                    return ("no");
                 }
             } else {
                 continue;
@@ -53,9 +53,9 @@ public class baek_4949 {
         }
 
         if (stack.empty()) {
-            return "YES";
+            return "yes";
         } else {
-            return "NO";
+            return "no";
         }
     }
 
