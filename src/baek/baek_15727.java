@@ -10,6 +10,7 @@ public class baek_15727 {
 
         int N = Integer.parseInt(br.readLine());
 
+
         if(N%5 == 0) System.out.println(N/5);
         else System.out.println(N/5+1);
     }
