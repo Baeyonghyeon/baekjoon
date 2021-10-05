@@ -9,6 +9,7 @@ public class baek_1032 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         String list[] = new String[N];
+
         StringBuilder sb = new StringBuilder();
         boolean bl = false;
 
