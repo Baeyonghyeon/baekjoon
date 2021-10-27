@@ -22,6 +22,7 @@ public class baek_2160 {
                 }
             }
         }
+
         int cnt=0;
         int min=Integer.MAX_VALUE,a=0,b=0;
         for(int i=0; i<n; i++) { // 2) 그림 개수마다 비교
