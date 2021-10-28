@@ -1,18 +1,9 @@
-def get_longest_repeat_time(string):
-        answer,cnt=1,1
+package baek;
 
-        for i in range(1,len(string)):
-            if string[i]==string[i-1]:
-                cnt+=1
-                if cnt>answer:
-                    answer=cnt
-            else:
-                cnt=1
-        return answer
+import java.io.IOException;
 
-
-
-        if __name__=="__main__":
-            for _ in range(3):
-            string=input()
-            print(get_longest_repeat_time(string))
+public class testclass {
+    public static void main(String[] args) throws IOException {
+        System.out.println("파이팅!!");
+    }
+}
