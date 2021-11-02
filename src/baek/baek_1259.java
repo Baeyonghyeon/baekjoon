@@ -23,11 +23,13 @@ public class baek_1259 {
                 for(int i=0; i < str.length(); i++){  //예로 12321 이면 12까지 sb1 에 추가
                     sb1.append(str.charAt(i));
                 }
-                for(int i=str.length()-1; i>=0; i--){
+                for(int i=str.length()-1; i>=0; i--){ //역으로 sb2에추가
                     sb2.append(str.charAt(i));
 
                 }
             }
+            //StringBuilder는 equals를 오버라이딩 하지 않아 equals를 사용시 주소를 비교해 같은 문자를 가지고 있더라도 주소가 달라
+            //false를 내보낸다 재정의를 사용하는 방법도 있지만 실패해 String형으로 형변환을 시켜 비교했다.
             String a1 = String.valueOf(sb1);
             String a2 = String.valueOf(sb2);
 
