@@ -15,7 +15,7 @@ public class baek_3003 {
         }
         for(int i =0; i<full.length; i++){
             cnt[i] = full[i] - cnt[i];
-            System.out.println(cnt[i]);
+            System.out.print(cnt[i]+" ");
         }
     }
 }
