@@ -95,6 +95,7 @@ public class baek_14891 {
         gear[i].remove(8);
     }
 
+    //최종 점수 계산
     static void sumScore(){
         for(int i = 0; i<4; i++){
             score += gear[i].get(0) * (1<<i);
