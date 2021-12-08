@@ -32,12 +32,12 @@ public class baek_2630 {
 
     //색종이가 같은색인지 확인
     static void check(int col, int row, int N) {
-        int value = ary[col][row];      //첫번째 원소랑 계속 비교
+        int value = ary[col][row];                  //첫번째 원소랑 계속 비교
 
         for (int i = col; i < N + col; i++) {
             for (int j = row; j < N + row; j++) {
                 if (ary[i][j] != value) {
-                    division(col,row,N);
+                    division(col,row,N);            //4분할 하는 메소드
                     return;
                 }
             }
@@ -47,10 +47,10 @@ public class baek_2630 {
 
     //4분할
     static void division(int col, int row, int N){
-        check(col, row+ N / 2, N / 2);                 //1사분면
-        check(col, row, N / 2);                             //2사분면
-        check(col + N / 2, row, N / 2);                 //3사분면
-        check(col + N / 2, row + N / 2, N / 2);    //4사분면
+        check(col, row+ N / 2, N / 2);          //1사분면
+        check(col, row, N / 2);                 //2사분면
+        check(col + N / 2, row, N / 2);         //3사분면
+        check(col + N / 2, row + N / 2, N / 2); //4사분면
     }
 
 }
