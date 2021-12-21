@@ -3,7 +3,6 @@ package baek;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Stack;
 
 public class baek_23253 {
     public static Boolean bl = true;
@@ -13,7 +12,6 @@ public class baek_23253 {
         String token[] = br.readLine().split(" ");
         int N = Integer.parseInt(token[0]);    //교과서의 수
         int M = Integer.parseInt(token[1]);    //더미의 수
-        Stack<Integer>[] stack = new Stack[M];
 
         for (int i = 0; i < M; i++) { //더미의 수 만큼 반복
             int k_case = Integer.parseInt(br.readLine());
