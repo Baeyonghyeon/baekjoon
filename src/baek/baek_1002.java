@@ -25,6 +25,7 @@ public class baek_1002 {
 
             double distance = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
 
+            
             if (x1 == x2 && y1 == y2 && r1 == r2) {
                 System.out.println(-1);
             } else if (distance == Math.pow(r2-r1,2) || distance == Math.pow(r2+r1,2)){
