@@ -60,6 +60,7 @@ public class baek_1316 {
                 } else { break; }
             }
         }
+        
         System.out.println(cnt);
     }
 }
