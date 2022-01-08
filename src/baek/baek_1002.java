@@ -10,10 +10,9 @@ public class baek_1002 {
          * java 는 부동소수점 타입을 정확한 값이 아니라 근사값으로 처리한다.
          * 간단한 예로 0.1 + 0.2 == 0.3 참이 아니다.
          */
-
+        
         int testcase;
         double x1, x2, y1, y2, r1, r2;
-
 
         testcase = scan.nextInt();
         for (int i = 0; i < testcase; i++) {
