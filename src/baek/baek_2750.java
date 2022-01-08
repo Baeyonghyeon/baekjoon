@@ -18,7 +18,6 @@ public class baek_2750 {
         }
 
         Arrays.sort(num);
-
         for (int i : num) {
             System.out.println(i);
         }
