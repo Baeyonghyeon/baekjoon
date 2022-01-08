@@ -26,7 +26,6 @@ public class baek_2775 {
                     apartment[j][l] = apartment[j][l - 1] + apartment[j - 1][l];
                 }
             }
-
             System.out.println(apartment[k][n-1]);
         }
 
