@@ -31,7 +31,6 @@ public class baek_4153 {
             } else {
                 System.out.println("wrong");
             }
-
         }
     }
 }
