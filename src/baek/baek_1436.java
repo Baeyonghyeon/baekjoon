@@ -20,7 +20,6 @@ public class baek_1436 {
                 System.out.println(num);
                 break;
             }
-
             num++;
         }
     }
