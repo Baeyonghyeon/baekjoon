@@ -12,4 +12,5 @@ public class baek_3053 {
                 System.out.println(R * R * Math.PI);	// 유클리드 원의 넓이
                 System.out.println(2 * R * R);		// 택시기하학 원의 넓이
         }
+    
 }
