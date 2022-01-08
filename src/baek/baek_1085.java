@@ -41,6 +41,5 @@ public class baek_1085 {
         } else{
             System.out.println(y);
         }
-
     }
 }
