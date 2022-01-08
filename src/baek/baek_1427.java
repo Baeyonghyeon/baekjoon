@@ -19,7 +19,6 @@ public class baek_1427 {
         }
 
         Arrays.sort(num);
-
         for(int i=input_len; i > 0; i--){
             System.out.print(num[i-1]);
         }
