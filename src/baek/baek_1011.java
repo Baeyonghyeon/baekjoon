@@ -15,7 +15,6 @@ public class baek_1011 {
             int Y = in.nextInt();
 
             int distance = Y - X;    // 거리
-
             int max = (int) Math.sqrt(distance);    // 소수점 버림
 
             if (max == Math.sqrt(distance)) {

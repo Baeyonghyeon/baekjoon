@@ -13,7 +13,6 @@ public class baek_10757 { //배열로 푸는 방법도 있음
         BigInteger bigB = new BigInteger(scan.next());
 
         total = bigA.add(bigB);
-
         System.out.println(total.toString());
     }
 }

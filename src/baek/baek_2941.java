@@ -50,6 +50,7 @@ public class baek_2941 {
                 }
             }
         }
+        
         System.out.println(count);
     }
 }

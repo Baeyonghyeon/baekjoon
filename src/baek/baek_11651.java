@@ -19,7 +19,6 @@ public class baek_11651 {
                 map[i][j] = Integer.parseInt(token[j]);          //해당 배열의 0~1번째 인덱스 값을 처리
             }
         }
-
         //sort 참고 https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Arrays.html#sort(T%5B%5D,java.util.Comparator)
         //Comparotor 파라미터로 넘어온 c의 비교 기준을 갖고 파라미터로 넘어온 객체배열 a을 정렬
         //음수일 경우 두 원소 위치교환 x , 양수일 경우 교환 o

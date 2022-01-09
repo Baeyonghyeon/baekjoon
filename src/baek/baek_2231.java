@@ -25,6 +25,7 @@ public class baek_2231 {
                 break;
             }
         }
+        
         System.out.println(result);
     }
 }

@@ -28,6 +28,7 @@ public class baek_2798 {
                 }
             }
         }
+        
         System.out.println(total);
     }
 }

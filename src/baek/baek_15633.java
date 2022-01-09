@@ -13,7 +13,6 @@ public class baek_15633 {
                 cnt += i;
             }
         }
-
         System.out.println(cnt * 5 - 24);
     }
 }
