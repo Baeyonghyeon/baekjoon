@@ -10,7 +10,7 @@ public class baek_11279 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
-        PriorityQueue<Integer> q = new PriorityQueue<>(((o1, o2) -> o2 - o1));
+        PriorityQueue<Integer> q = new PriorityQueue<>((o1, o2) -> o2 - o1);
 
         while (N-->0){
             int n = Integer.parseInt(br.readLine());
@@ -24,5 +24,7 @@ public class baek_11279 {
                 q.offer(n);
             }
         }
+
+        System.out.println(sb);
     }
 }
