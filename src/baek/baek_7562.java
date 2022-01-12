@@ -8,8 +8,8 @@ import java.util.Queue;
 
 public class baek_7562 {
     static int T, I;
-    static int map[][];
-    static boolean visit[][];
+    static int map[][];         // 체스판
+    static boolean visit[][];   // 체스판 방문했는지 확인
     static int dx[] = {1, 2, -1, -2, -1, -2, 1, 2};
     static int dy[] = {2, 1, 2, 1, -2, -1, -2, -1};
     static Queue<int[]> q = new LinkedList<>();
@@ -17,7 +17,7 @@ public class baek_7562 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        T = Integer.parseInt(br.readLine());
+        T = Integer.parseInt(br.readLine());                      //테스트 케이스
 
         while (T-- > 0) {
             I = Integer.parseInt(br.readLine());
