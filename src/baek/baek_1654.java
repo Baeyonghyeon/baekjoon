@@ -16,6 +16,7 @@ public class baek_1654 {
         for (int i = 0; i < K; i++) {
             list[i] = Integer.parseInt(br.readLine());
             if (list[i] > max) max = list[i];
+
         }
 
         max++;      //ex) 동타가 나왔을때 1 1이 나오면 min<max 조건에 걸리지 않으므로 max++ 해주어야 한다.
