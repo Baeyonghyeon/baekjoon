@@ -9,6 +9,7 @@ public class baek_1550 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine(),16); // 16진수로 표현
 
+        
         System.out.println(N);
     }
 }
