@@ -1,4 +1,4 @@
-package javaStudy;
+package javaStudy.day1;
 
 public class SwapAdvanced {
     public static void main(String[] args) {
@@ -10,5 +10,5 @@ public class SwapAdvanced {
         a = a/b;
 
         System.out.println("After swap. a: " + a + ", b: " + b);
-    }ㄹ
+    }
 }

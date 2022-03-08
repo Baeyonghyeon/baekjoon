@@ -1,4 +1,4 @@
-package javaStudy;
+package javaStudy.day1;
 
 public class SpecialChars {
     public static void main(String[] args) {

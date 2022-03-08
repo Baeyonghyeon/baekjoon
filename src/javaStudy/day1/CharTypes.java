@@ -1,4 +1,4 @@
-package javaStudy;
+package javaStudy.day1;
 
 import org.w3c.dom.ls.LSOutput;
 
