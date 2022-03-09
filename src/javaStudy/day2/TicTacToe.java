@@ -9,17 +9,15 @@ public class TicTacToe {
     static char[][] board = new char[3][3];
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Random random = new Random();
 
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
                 board[i][j] = ' ';
             }
         }
-        Random random = new Random();
-        int result = random.nextInt(20) + 1; //1 ~ 20;
 
         while (true){
-
             //사용자 턴
             System.out.print("사용자 턴(x y): ");
             int x = sc.nextInt();
@@ -100,7 +98,7 @@ public class TicTacToe {
             cnt = 0;
         }
 
-        //킹각선 검사
+        //대각선 검사
         if(board[0][0] != ' '){
             ch = board[0][0];
             if (ch == board[1][1] && ch == board[2][2]) return true;
