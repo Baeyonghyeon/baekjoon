@@ -135,8 +135,4 @@ class MemberRepository{
         }
         return name;
     }
-
-//    int findLoginAttempt(){
-//
-//    }
 }

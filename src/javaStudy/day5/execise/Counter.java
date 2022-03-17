@@ -46,11 +46,9 @@ public class Counter {
         return amount;
     }
 
-    public int payment(Customer customer){
+    public int payment(Customer customer) throws InsufficientFunds{
         if(customer.getWallet() - customer.getReceipt() < 0){
-            System.out.println("잔액 부족입니다.");
-            System.out.println("고객님 잔액 :" + (customer.getWallet() - customer.getReceipt()) + "원 입니다.");
-            return customer.getWallet();
+            throw new InsufficientFunds("자금이 부족합니다.");
         }else {
             System.out.println("고객님 잔액 :" + (customer.getWallet() - customer.getReceipt()) + "원 입니다.");
             return customer.getWallet() - customer.getReceipt();

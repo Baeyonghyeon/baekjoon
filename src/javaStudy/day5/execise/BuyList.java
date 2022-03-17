@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class BuyList {
     //양파 2개
     //계란 3판
+    //아이템을 할당할때 동적으로 할당해야 하므로 ArrayList 사용
     private final ArrayList<Item> items = new ArrayList<>();
 
     //sc 사용해 값 넣어주자

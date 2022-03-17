@@ -15,9 +15,9 @@ public class NhnMartShell {
         //장바구니를 챙긴다. 현재 빈 바구니를 챙긴상태.
         jordan.bring(mart.provideBasket());
         //식품을 담는다.
-        jordan.pickFoods(mart.getFoodStand(jordan.getBasket(),jordan.getBuyList()));
+        jordan.pickFoods(mart.getFoodStand(jordan)); // 인수 jordan.getBasket, jordan.getBuyList -> jordan
         //카운터에서 계산한다.
-        jordan.pay(mart.getCounter(jordan.getBasket()));
+        jordan.pay(mart.getCounter(jordan)); // 인수 jordan.basket -> jordan
         //couponRedeem
         jordan.couponRedeem(mart.couponRedeemPrice(jordan));
         //결제
@@ -80,9 +80,9 @@ class NhnMart {
         return basket;
     }
 
-    public Basket getFoodStand(Basket basket, BuyList buyList) {
+    public Basket getFoodStand(Customer customer) {
         //item 에 담은 name, amount를 가져와야한다. 가져오고 basket에 담아야 한다.
-        ArrayList<BuyList.Item> items = buyList.checkShoppingList();
+        ArrayList<BuyList.Item> items = customer.getBuyList().checkShoppingList();
 
         //foodStand에서 name을 비교해서 값을 가져옴
         for (int i = 0; i < items.size(); i++) {
@@ -90,16 +90,16 @@ class NhnMart {
             int amount = items.get(i).getAmount();
 
             for (int j = 0; j < amount; j++) {
-                basket.add(foodStand.picked(name));
+                customer.getBasket().add(foodStand.picked(name));
             }
         }
 
-        return basket;
+        return customer.getBasket();
     }
 
     //손님인 나는 바스켓을 들고 카운터에가서 바스켓을 맡기면 알아서 계산해준다.
-    public int getCounter(Basket basket){
-        counter = new Counter(basket);
+    public int getCounter(Customer customer /*Basket basket*/){
+        counter = new Counter(customer.getBasket());
 
         return counter.getTotalPrice();
     }
@@ -116,6 +116,12 @@ class NhnMart {
     }
 
     public int payment(Customer customer){
-        return counter.payment(customer);
+        int pay = 0;
+        try {
+            pay = counter.payment(customer);
+        }catch (InsufficientFunds e){
+            System.exit(0);
+        }
+        return pay;
     }
 }
