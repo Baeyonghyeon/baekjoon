@@ -5,7 +5,6 @@ public class RunThread {
         System.out.println("Hello! Main on " + Thread.currentThread().getName());
         new HelloThread().start();
         new Thread(new HelloRunner()).start();
-        new HelloThread().start();
     }
 }
 

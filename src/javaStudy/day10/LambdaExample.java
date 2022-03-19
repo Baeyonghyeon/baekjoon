@@ -10,7 +10,7 @@ public class LambdaExample {
         e.before();
     }
 
-    private void before(){
+    private void before() {
         List<String> names = Arrays.asList("jordan", "coco", "comtin", "manty");
         names.replaceAll(s -> s.toUpperCase());
         System.out.println(names);

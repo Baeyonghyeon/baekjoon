@@ -16,10 +16,10 @@ public class MonitorThread extends Thread {
             System.out.println(getName() + " after running(10_000 times)");
             synchronized (monitor) {
                 System.out.println(getName() + " is waiting");
-                monitor.wait(); // 모니터에 의해 대기 중으로
+                monitor.wait(100_000); // 모니터에 의해 대기 중으로    WAITING
             }
             System.out.println(getName() + " is notified");
-            Thread.sleep(1_000);
+            Thread.sleep(1_000);                    // TIMED_WAITING
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -18,7 +18,7 @@ public class SafeVar {
         System.out.println("strs.class = " + strs.getClass());
 
         // Unsafe
-//        String[] forest = broken("Tree"); // ClassCastException
+        String[] forest = broken("Tree"); // ClassCastException
 //        Integer[] busy = broken(1);       // ClassCastException
     }
 }

@@ -1,21 +1,23 @@
 package javaStudy.day9;
 
 public class Dual {
+    private StringBuilder sb = new StringBuilder();
+
+    //    private Object lock = new Object();
+//    private Object monitor = new Object();
     public static void main(String[] args) {
         Dual dual = new Dual();
         dual.humanVsOrc();
     }
 
-    private StringBuilder sb = new StringBuilder();
     void attack(String weapon) {
-        synchronized(this) {
-            sb.append(weapon);
-        }
+        sb.append(weapon);
     }
 
     public void humanVsOrc() {
         Thread human = new Thread(new Worrier("🗡️️", this));
         Thread orc = new Thread(new Worrier("🪓", this));
+
 
         orc.start();
         human.start();
@@ -32,6 +34,7 @@ public class Dual {
     static class Worrier implements Runnable {
         private String weapon;
         private Dual dual;
+        static final Object monitor = new Object();
 
         public Worrier(String weapon, Dual dual) {
             this.weapon = weapon;
@@ -46,7 +49,9 @@ public class Dual {
         }
 
         public void attack() {
-            dual.attack(this.weapon);
+            synchronized (monitor) {
+                dual.attack(this.weapon);
+            }
         }
     }
 }
