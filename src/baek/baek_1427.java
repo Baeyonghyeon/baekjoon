@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.lang.*;
 
 public class baek_1427 {
     public static void main(String[] args) throws IOException {
@@ -15,7 +16,9 @@ public class baek_1427 {
 
         for (int i=0; i< input_len; i++){
             char change = input.charAt(i);
+            /* 주석 나중에 지울것
             num[i] = Character.getNumericValue(change);
+            */
         }
 
         Arrays.sort(num);
