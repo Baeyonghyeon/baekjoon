@@ -1,0 +1,19 @@
+header > p {
+    color: red;
+}
+
+header > div > p{
+    color: antiquewhite;
+}
+
+div::before {
+    content: "마블's";
+    color: red;
+    margin-right: 10px;
+}
+
+div::after {
+    content: "시리즈";
+    color: blue;
+    margin-left: 10px;
+}

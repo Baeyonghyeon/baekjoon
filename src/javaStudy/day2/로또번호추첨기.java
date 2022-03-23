@@ -1,5 +1,6 @@
 package javaStudy.day2;
 
+import java.security.SecureRandom;
 import java.util.*;
 
 public class 로또번호추첨기 {
@@ -20,7 +21,7 @@ public class 로또번호추첨기 {
     }
 
     private static void lottoGenerate() {
-        Random random = new Random();
+        SecureRandom random = new SecureRandom();
         for (int i = 0; i < 6; i++) {
             //lotto[i] = random.nextInt(45) + 1; // 1 ~ 45
             lotto.add(random.nextInt(45) + 1);  // 1 ~ 45

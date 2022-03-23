@@ -1,0 +1,48 @@
+#container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#header{
+    background-color: #9D93D7;
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+#leftSection{
+    background-color: #F8F9FA;
+    float: left;
+    width: 40%;
+    height: 400px;
+}
+#rightSection{
+    background-color: white;
+    float: left;
+    width: 60%;
+    height: 400px;
+}
+#footer{
+    background-color: #DCDDDF;
+    clear: both;
+    width: 100%;
+    height: 100%;
+}
+
+#box {
+    width: 180px;
+    height: 180px;
+    border-radius: 80%;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+#profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body{
+    margin: 0px;
+}
