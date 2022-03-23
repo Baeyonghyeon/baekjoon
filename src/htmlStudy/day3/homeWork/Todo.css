@@ -1,0 +1,30 @@
+body{
+    margin: 0px;
+}
+
+#container{
+    background-color: #ffffff;
+    border: 1px solid #c586dc;
+    width: 80%;
+    height: 70px;
+    margin: 10px;
+}
+
+#leftContainer{
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 1px solid #c586dc;
+    float:left;
+}
+
+#rightContainer{
+    width: 82%;
+    height: 150px;
+    background-color: #ffffff;
+    border: 1px solid #c586dc;
+}
+
+#main{
+    margin: 10px;
+}
