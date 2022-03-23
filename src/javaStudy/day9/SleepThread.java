@@ -7,10 +7,8 @@ public class SleepThread extends Thread {
     }
     @Override
     public void run() {
-        System.out.println("Sleeping " + getName());
         try {
             Thread.sleep(millis);   // 특정 시간 동안 대기
-            System.out.println("Stopping " + getName());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
