@@ -5,7 +5,7 @@ body{
 #container{
     background-color: #ffffff;
     border: 1px solid #c586dc;
-    width: 80%;
+    width: 79%;
     height: 70px;
     margin: 10px;
 }
@@ -19,7 +19,7 @@ body{
 }
 
 #rightContainer{
-    width: 82%;
+    width: 80%;
     height: 150px;
     background-color: #ffffff;
     border: 1px solid #c586dc;
