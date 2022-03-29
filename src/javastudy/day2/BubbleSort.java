@@ -1,4 +1,4 @@
-package javaStudy.day2;
+package javastudy.day2;
 
 import java.util.Random;
 

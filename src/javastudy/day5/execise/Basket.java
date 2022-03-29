@@ -1,4 +1,4 @@
-package javaStudy.day5.execise;
+package javastudy.day5.execise;
 
 import java.util.ArrayList;
 

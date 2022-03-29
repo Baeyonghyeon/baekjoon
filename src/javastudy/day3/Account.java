@@ -1,4 +1,4 @@
-package javaStudy.day3;
+package javastudy.day3;
 
 public class Account {
     public static void main(String[] args) {

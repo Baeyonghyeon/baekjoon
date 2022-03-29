@@ -1,4 +1,4 @@
-package javaStudy.day5;
+package javastudy.day5;
 
 class SignInUpShell {
     private final AccountService service = new AccountService();

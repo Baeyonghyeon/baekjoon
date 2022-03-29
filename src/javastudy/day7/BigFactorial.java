@@ -1,4 +1,4 @@
-package javaStudy.day7;
+package javastudy.day7;
 
 import java.math.BigInteger;
 

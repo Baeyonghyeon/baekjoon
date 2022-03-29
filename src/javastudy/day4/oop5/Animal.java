@@ -1,4 +1,4 @@
-package javaStudy.day4.oop5;
+package javastudy.day4.oop5;
 
 public class Animal {
     public void cry(){

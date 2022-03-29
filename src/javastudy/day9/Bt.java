@@ -1,4 +1,4 @@
-package javaStudy.day9;
+package javastudy.day9;
 
 import java.util.List;
 

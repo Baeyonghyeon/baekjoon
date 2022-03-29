@@ -1,4 +1,4 @@
-package javaStudy.day4.oop1;
+package javastudy.day4.oop1;
 
 public class Animal {
 
