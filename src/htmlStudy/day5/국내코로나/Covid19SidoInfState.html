@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="Covid19SidoInfState.js"></script>
+    <!--    차트-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+    <link rel="stylesheet" href="Covid19SidoInfState.css">
+    <title>코로나 도시발생 현황</title>
+
+</head>
+<body>
+
+<main id="container">
+
+    <table class="type11">
+        <thead>
+        <tr>
+            <th scope="cols">지역</th>
+            <th scope="cols">현재 확진자수</th>
+            <th scope="cols">신규 확진자수</th>
+        </tr>
+        </thead>
+        <tbody id="contents">
+        </tbody>
+    </table>
+
+    <div id = "btn">
+        <button id = "prev"><<</button>
+        <span id="page">
+
+        </span>
+        <button id = "next">>></button>
+    </div>
+</main>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+</body>
+</html>

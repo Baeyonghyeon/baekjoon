@@ -1,3 +1,0 @@
-package javaStudy.day6;
-
-

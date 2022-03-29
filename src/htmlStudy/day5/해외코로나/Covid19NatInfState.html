@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="Covid19NatInfState.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!--    차트-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+    <link rel="stylesheet" href="Covid19NatInfState.css">
+    <title>코로나 세계발생 현황</title>
+
+</head>
+<body>
+
+<main id="container">
+
+    <select name="selectCountry" onchange="handleOnChange(this)">
+        <option value="아프리카">아프리카</option>
+        <option value="오세아니아">오세아니아</option>
+        <option value="유럽">유럽</option>
+        <option value="아메리카">아메리카</option>
+        <option value="중동">중동</option>
+        <option value="아시아">아시아</option>
+    </select>
+
+    <table class="type11">
+        <thead>
+        <tr>
+            <th scope="cols">국가명</th>
+            <th scope="cols">확진자(누적)</th>
+            <th scope="cols">신규(확진자수)</th>
+            <th scope="cols">확진자 대비 사망률</th>
+        </tr>
+        </thead>
+        <tbody id="contents">
+        </tbody>
+    </table>
+
+    <div id = "btn">
+        <button id = "prev"><<</button>
+        <span id="page">
+
+        </span>
+        <button id = "next">>></button>
+    </div>
+
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+</main>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+</body>
+</html>
