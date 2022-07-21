@@ -22,4 +22,5 @@ public class programmers_멀리뛰기 {
 
         System.out.println(ary[n-1]);
     }
+    //커밋이 안찍혀
 }
