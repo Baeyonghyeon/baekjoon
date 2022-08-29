@@ -21,8 +21,6 @@ L
 src/htmlStudy/day1/Test.html,4/8/4848d8806f9fc23f1dc50e9b6f120d7edd9f9f5a
 G
 src/baek/baek_1085.java,5/6/56e4d852d9254f88408c0eabf3ec140d11a205fb
-U
-%src/htmlStudy/day3/homeWork/ToDo.html,4/a/4a9e350e354ee3126e75b0de5706019f2a8186c9
 S
 #src/htmlStudy/day3/homeWork/test.js,0/d/0da11a1d36cd751f7faaf1e53a6b001d61466e03
 T
@@ -33,3 +31,11 @@ M
 src/htmlStudy/day4/Covid.html,4/1/41a425321475021ffee66745940d2e9957b34beb
 R
 "src/htmlStudy/day4/validation.html,f/4/f47084bdd2128110120edc8040f5c2b3a651f01d
+E
+src/coplet/isOdd.java,4/8/48af8301482713ffb6c4b57745e72792c693f5b1
+K
+src/htmlStudy/day5/Tag.html,3/0/30f950ec8251fc71d75f13ab1a6ee67ee921ce5d
+U
+%src/htmlStudy/day3/homeWork/ToDo.html,4/a/4a9e350e354ee3126e75b0de5706019f2a8186c9
+S
+#src/htmlStudy/Twittler/package.json,f/9/f9c85927caa350e28ddec346373aa6b439fc8185
