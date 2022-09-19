@@ -39,3 +39,11 @@ U
 %src/htmlStudy/day3/homeWork/ToDo.html,4/a/4a9e350e354ee3126e75b0de5706019f2a8186c9
 S
 #src/htmlStudy/Twittler/package.json,f/9/f9c85927caa350e28ddec346373aa6b439fc8185
+O
+src/htmlStudy/Twittler/main.css,f/d/fd98379b2a8098336910f7bb2c52306cedb3ca14
+P
+ src/htmlStudy/Twittler/script.js,0/9/09cbed2f695f845fbd1f11edb8f1b2a216b05b3e
+C
+src/coplet/Sum.java,7/9/793b4bde9f6a0ff9d7cce047eeafcd47feec0626
+Z
+*src/coplet/ComputeAverageOfMaleMember.java,e/d/ed68a22640d5dc3fa488d4260a2dcf31b1be2b96
