@@ -8,5 +8,6 @@ public class firstReverse {
 
         sb.reverse();
         String.valueOf(sb);
+        System.out.println(sb);
     }
 }
