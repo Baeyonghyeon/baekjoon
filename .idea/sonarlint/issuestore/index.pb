@@ -47,3 +47,11 @@ C
 src/coplet/Sum.java,7/9/793b4bde9f6a0ff9d7cce047eeafcd47feec0626
 Z
 *src/coplet/ComputeAverageOfMaleMember.java,e/d/ed68a22640d5dc3fa488d4260a2dcf31b1be2b96
+H
+src/baek/baek_11650.java,d/c/dc7d03d8484882e19cd3c89ba8c638cfb03b3058
+H
+src/baek/baek_11660.java,a/e/aee9d1fb83b9461f399fb5e20750475d1ff3ff98
+G
+src/baek/baek_1260.java,a/7/a75e2d09b661e94102e03c8e797cc7e9ff344836
+B
+src/baek/test.java,2/7/279b80470f74688b9260ee12b2cb00837b375a86
