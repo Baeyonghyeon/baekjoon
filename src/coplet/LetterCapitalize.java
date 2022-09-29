@@ -1,6 +1,6 @@
 package coplet;
 
-public class letterCapitalize {
+public class LetterCapitalize {
     public static void main(String[] args) {
         String output1 = letterCapitalize("hello world");
         System.out.println(output1); // "Hello World"
@@ -21,8 +21,6 @@ public class letterCapitalize {
                 sb.append(str.charAt(i));
             }
         }
-
-
 
         return String.valueOf(sb).strip();
     }

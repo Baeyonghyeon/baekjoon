@@ -16,6 +16,7 @@ public class baek_1260 {
         int N = Integer.parseInt(token1[0]); //정점의 개수
         int M = Integer.parseInt(token1[1]); //간선의 개수
         int V = Integer.parseInt(token1[2]); //탐색을 시작할 번호
+        
 
         for (int i = 0; i < N + 1; i++) {
             graph.add(new ArrayList<Integer>());

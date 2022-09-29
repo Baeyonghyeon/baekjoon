@@ -56,8 +56,6 @@ Z
 Q
 !src/htmlStudy/Twittler/index.html,d/2/d2d08f6106b8bb0a7257c27e935b8a7ae707b8c0
 G
-src/baek/baek_1260.java,a/7/a75e2d09b661e94102e03c8e797cc7e9ff344836
-G
 src/baek/baek_2178.java,6/3/635bb6e9aa7b473ed85c518b7003d1f640bab1da
 G
 src/baek/baek_2667.java,c/2/c2b416efd13bd75e03907105a988513cdf94ebc2
@@ -67,3 +65,19 @@ j
 :src/htmlStudy/day5/해외코로나/Covid19NatInfState.html,d/a/dac3d12c7f7f0ff0bf3954d7c9ca250de69d28a6
 N
 src/htmlStudy/Twittler/data.js,2/9/29481fc64bbf9313daadf2a6e029b50931f47884
+E
+src/coplet/IsOdd.java,4/9/49b4f04f56a5628e37148f6fda9e90b95bcb3864
+C
+src/coplet/Sum.java,7/9/793b4bde9f6a0ff9d7cce047eeafcd47feec0626
+P
+ src/coplet/letterCapitalize.java,4/d/4d2adb7edf70cb07290cb5424ac9e4c6fde70698
+M
+src/coplet/GraphPathFind.java,0/5/05f56d88959e45df78f5b09df98eb076bbedbd9f
+L
+src/coplet/firstReverse.java,0/a/0a8767b960d166b5e03d7e1f5070375b97af68fc
+E
+src/coplet/Carry.java,b/f/bfd211ab014460710981b170d4c83b555f4f19ee
+H
+src/coplet/testmain.java,9/8/98fd22ec6170cd359da8b4e525eb3dccb1540dbd
+F
+src/coplet/Change.java,2/a/2a133774823c5f51b3b6dbda599ff429768d9512
