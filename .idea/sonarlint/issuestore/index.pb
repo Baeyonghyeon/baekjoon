@@ -83,3 +83,9 @@ F
 src/coplet/Change.java,2/a/2a133774823c5f51b3b6dbda599ff429768d9512
 G
 src/baek/baek_1260.java,a/7/a75e2d09b661e94102e03c8e797cc7e9ff344836
+S
+#src/coplet/ConvertListToObject.java,1/c/1c641f44ef9cf4750acaa9039a49aeba3e6c35b5
+I
+src/coplet/BoardGame.java,d/4/d4073d46df81a53919f64cd0b51d1a5b5e2a1cff
+G
+src/coplet/RobSafe.java,2/1/21326840d078b1f34112d81898ef199ad2cebdd5
