@@ -89,3 +89,7 @@ I
 src/coplet/BoardGame.java,d/4/d4073d46df81a53919f64cd0b51d1a5b5e2a1cff
 G
 src/coplet/RobSafe.java,2/1/21326840d078b1f34112d81898ef199ad2cebdd5
+P
+ src/coplet/LetterCapitalize.java,8/7/87ffbfe6aa4387b4e857991ecd72cffbb35475db
+Z
+*src/coplet/ConvertDoubleSpaceToSingle.java,7/8/7822e304a63f591d536c9f73a791cf9f526dc180
