@@ -93,3 +93,9 @@ P
  src/coplet/LetterCapitalize.java,8/7/87ffbfe6aa4387b4e857991ecd72cffbb35475db
 Z
 *src/coplet/ConvertDoubleSpaceToSingle.java,7/8/7822e304a63f591d536c9f73a791cf9f526dc180
+J
+src/coplet/ReverseArr.java,2/d/2d63302798e3d2e8aad123304350af734af3fa51
+J
+src/coplet/InsertDash.java,0/0/0083fb38c67452a39e351badee6b67d217f4639c
+N
+src/coplet/RemoveExtremes.java,2/f/2fbd59a1d94b6e61d4aa9cee12c40d58a0385ec7
