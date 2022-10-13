@@ -99,3 +99,5 @@ J
 src/coplet/InsertDash.java,0/0/0083fb38c67452a39e351badee6b67d217f4639c
 N
 src/coplet/RemoveExtremes.java,2/f/2fbd59a1d94b6e61d4aa9cee12c40d58a0385ec7
+Q
+!src/coplet/RockScissorsPaper.java,4/3/43dd4ca2bacc95204e06bd243ec49701867d231a
