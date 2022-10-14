@@ -101,3 +101,21 @@ N
 src/coplet/RemoveExtremes.java,2/f/2fbd59a1d94b6e61d4aa9cee12c40d58a0385ec7
 Q
 !src/coplet/RockScissorsPaper.java,4/3/43dd4ca2bacc95204e06bd243ec49701867d231a
+G
+src/coplet/ABCheck.java,9/5/957bc458924757e59088330f1090998872faf312
+N
+src/coplet/ReadVertically.java,3/7/37c8848609b3784aa7784521248f017af1b2e09a
+O
+src/coplet/SuperIncreasing.java,d/7/d75aba749c4c7f6a05173aa04cf4469e6fe9429b
+F
+src/coplet/Modulo.java,5/c/5c5c5d1f31b07c1ffaff42a4a5d83e501f9ed646
+G
+src/baek/baek_9012.java,8/e/8eeedce205050d11026e94af5b5f43798fd26077
+U
+%src/coplet/GraphGeneratePractice.java,1/f/1f47fcc06b85978d8330a1809b44eedd535af141
+I
+src/coplet/IsIsogram.java,8/8/886ab8bb7e4f65f76f11204b271adc640fa940bc
+B
+src/baek/test.java,2/7/279b80470f74688b9260ee12b2cb00837b375a86
+P
+ src/coplet/FilterOddNumbers.java,2/1/21c1677477b532eb76114c8bff970c4b995d7f18
