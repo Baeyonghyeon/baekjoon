@@ -75,8 +75,6 @@ M
 src/coplet/GraphPathFind.java,0/5/05f56d88959e45df78f5b09df98eb076bbedbd9f
 L
 src/coplet/firstReverse.java,0/a/0a8767b960d166b5e03d7e1f5070375b97af68fc
-E
-src/coplet/Carry.java,b/f/bfd211ab014460710981b170d4c83b555f4f19ee
 H
 src/coplet/testmain.java,9/8/98fd22ec6170cd359da8b4e525eb3dccb1540dbd
 F
