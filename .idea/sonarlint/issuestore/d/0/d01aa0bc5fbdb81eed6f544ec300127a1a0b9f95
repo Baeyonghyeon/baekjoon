@@ -1,0 +1,19 @@
+
+V	java:S125	"<This block of commented-out lines of code should be removed.(é‡ˆºüÿÿÿÿ
+4
+java:S2119"Save and re-use this "Random".(¡Å”¦
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¡¤–õûÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(„Ü
+S	java:S106"9Replace this use of System.out or System.err by a logger.(–¢µğúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«í¨ú
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ª»¤Ö
+4
+java:S2119"Save and re-use this "Random".(¡Å”¦
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(Ášùÿÿÿÿ
+4
+java:S2119("Save and re-use this "Random".(¡Å”¦
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(¡¤–õûÿÿÿÿ
+G
+java:S1144",Remove this unused private "treeSet" method.(Ü˜ëÿÿÿÿÿ
+C
+java:S1144&"(Remove this unused private "set" method.(€Ä½áÿÿÿÿÿ

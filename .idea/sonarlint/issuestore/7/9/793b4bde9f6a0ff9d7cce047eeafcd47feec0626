@@ -1,0 +1,10 @@
+
+Z	java:S106	"9Replace this use of System.out or System.err by a logger.(Û¨ƒ®ýÿÿÿÿ8ÕÎºª¬0
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Åá®Œ8ÖÎºª¬0
+H
+java:S1135"2Complete the task associated to this TODO comment.(ÓñàÍ
+I
+java:S1602",Remove useless curly braces around statement(£…ÐÇ8Šóù¿¬0
+[
+java:S1612">Replace this lambda with method reference 'result::addAndGet'.(£…ÐÇ8¶Œú¿¬0

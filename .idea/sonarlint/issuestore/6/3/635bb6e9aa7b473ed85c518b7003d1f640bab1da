@@ -1,0 +1,27 @@
+
+J
+java:S10665"/Merge this if statement with the enclosing one.(Ÿ›ïÎûÿÿÿÿ
+b	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÏÂ—ê
+b
+java:S3008
+"LRename this field "N" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ ¬ï
+b
+java:S3008
+"LRename this field "M" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ ¬ï
+5
+java:S1659
+"Declare "M" on a separate line.(ğ ¬ï
+G
+java:S1197",Move the array designators [][] to the type.(„åû¾şÿÿÿÿ
+B
+java:S1197",Move the array designators [][] to the type.(ÌÇæ
+@
+java:S1197"*Move the array designators [] to the type.(¨ÈŞÆ
+@
+java:S1197"*Move the array designators [] to the type.(Å¶è¼
+@
+java:S1197"*Move the array designators [] to the type.(šöûÏ
+E
+java:S1197"*Move the array designators [] to the type.(€²Õ‚ùÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(Í™èòøÿÿÿÿ
+c	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞÎƒ‘

@@ -1,0 +1,8 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ô·ù’øÿÿÿÿ8—ìş˜¸0
+Z	java:S106	"9Replace this use of System.out or System.err by a logger.(›ÑÉıÿÿÿÿ8—ìş˜¸0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ï®¼şÿÿÿÿ8˜ìş˜¸0
+V
+java:S3400"9Remove this method and declare a constant for this value.(”·³›8å¸ƒ¶¸0
+T
+java:S1172"2Remove these unused method parameters "i", "ints".(ÃıÅûÿÿÿÿ8‰œÿ˜¸0
