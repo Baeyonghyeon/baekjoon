@@ -125,3 +125,21 @@ L
 src/coplet/NumberSearch.java,c/6/c68aed5b9270115420b8bf120cd3e5b739e20d6a
 S
 #src/coplet/DecryptCaesarCipher.java,2/6/264d8e1897f88ad81497e518e892adc550f8a83b
+w
+G.idea/sonarlint/issuestore/d/2/d2d08f6106b8bb0a7257c27e935b8a7ae707b8c0,0/a/0a5d47348e4c33e595351c8d430a9f829562c146
+w
+G.idea/sonarlint/issuestore/2/9/29481fc64bbf9313daadf2a6e029b50931f47884,d/8/d894cbecf88ec3310e024ae3c0af04e7629bf6b7
+w
+G.idea/sonarlint/issuestore/f/9/f9c85927caa350e28ddec346373aa6b439fc8185,9/d/9d66ac59ee84b980a25f9887b5da3e0c9c106e21
+w
+G.idea/sonarlint/issuestore/8/0/806943a294587f055eda8b76564e0d6bdc12ba6b,b/1/b184ac85ea7d365f9fe576057c85e7634aed735c
+w
+G.idea/sonarlint/issuestore/b/d/bdb2c92772d821892088f3951038c2754284e8a0,9/d/9dc225475b5dd46aeb97c5719e0b4df75bcd2882
+w
+G.idea/sonarlint/issuestore/4/a/4a9e350e354ee3126e75b0de5706019f2a8186c9,6/f/6fa86e0bec8c662c55b190694a29d40f1962cc2a
+w
+G.idea/sonarlint/issuestore/3/0/30f950ec8251fc71d75f13ab1a6ee67ee921ce5d,1/9/1952d2212b2db443f6aa8c882f65a93ff50cb722
+w
+G.idea/sonarlint/issuestore/f/d/fd98379b2a8098336910f7bb2c52306cedb3ca14,c/a/caeab52b1aa4a6e164f8b1df14386c7bb7c5e198
+w
+G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b/4/b4a0b63ce8560bbc5de0f9995c20cc861dc2adb3
