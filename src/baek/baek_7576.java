@@ -5,56 +5,46 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.StringTokenizer;
 
 public class baek_7576 {
-    static int M, N;
+    static int N, M;
+    static int max = 0;
     static boolean visit[][];
     static int map[][];
     static int dx[] = {-1, 1, 0, 0};
-    static int dy[] = {0, 0, -1, 1};
+    static int dy[] = {-0, 0, -1, 1};
     static Queue<int[]> q = new LinkedList<>();
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String token[] = br.readLine().split(" ");
-        M = Integer.parseInt(token[0]);     //상자 가로
-        N = Integer.parseInt(token[1]);     //상자 세로
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        M = Integer.parseInt(st.nextToken());
+        N = Integer.parseInt(st.nextToken());
 
         visit = new boolean[N][M];
         map = new int[N][M];
         for (int i = 0; i < N; i++) {
-            token = br.readLine().split(" ");
+            st = new StringTokenizer(br.readLine());
             for (int j = 0; j < M; j++) {
-                map[i][j] = Integer.parseInt(token[j]);
-                if (map[i][j] == 1) q.offer(new int[]{i, j});
-            }
-        }
-
-        BFS();
-
-        int max = 0;
-        boolean bl = true;
-
-        //0이 있는지 검사 (토마토가 익지 않았는지 검사)
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                if (map[i][j] == 0) {   //익지 않은게 있다면 -1
-                    bl = false;
-                    break;
-                } else {
-                    if (map[i][j] > max) max = map[i][j];
+                map[i][j] = Integer.parseInt(st.nextToken());
+                if (map[i][j] == 1) {
+                    q.offer(new int[]{i, j});
                 }
             }
         }
+        BFS();
 
-        if (bl) {
-            System.out.println(max - 1);
+        if(isUnripeTomato()){
+            System.out.println(max-1);
         } else {
             System.out.println("-1");
         }
+
     }
 
-    public static void BFS() {
+    private static void BFS() {
         while (!q.isEmpty()) {
             int x = q.peek()[0];
             int y = q.peek()[1];
@@ -75,5 +65,20 @@ public class baek_7576 {
             }
         }
     }
+
+    private static boolean isUnripeTomato() {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                if (map[i][j] == 0) {
+                    return false;
+                }
+                if (map[i][j] > max) {
+                    max = map[i][j];
+                }
+            }
+        }
+        return true;
+    }
+
 
 }
