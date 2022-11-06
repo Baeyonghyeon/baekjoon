@@ -143,3 +143,11 @@ w
 G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b/4/b4a0b63ce8560bbc5de0f9995c20cc861dc2adb3
 N
 src/coplet/CompressString.java,3/6/36cbaedbeea2aae4d485fc94215230755bd5a6bc
+U
+%src/coplet/LargestProductOfThree.java,f/5/f5faab3b6c4a5aa5678e1116a432c924f918851e
+J
+src/coplet/BubbleSort.java,0/5/05a803b0a87c31fe1943fda0bb919dca21b93b4d
+I
+src/coplet/Fibonacci.java,0/0/00f631d5cb696da6d74970528b17f938ebcf1571
+J
+src/coplet/IsSubsetOf.java,0/3/03c80514b0c67be412e9f93eae586d99105efc29
