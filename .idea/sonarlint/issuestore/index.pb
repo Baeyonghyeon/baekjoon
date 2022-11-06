@@ -85,8 +85,6 @@ I
 src/coplet/BoardGame.java,d/4/d4073d46df81a53919f64cd0b51d1a5b5e2a1cff
 G
 src/coplet/RobSafe.java,2/1/21326840d078b1f34112d81898ef199ad2cebdd5
-P
- src/coplet/LetterCapitalize.java,8/7/87ffbfe6aa4387b4e857991ecd72cffbb35475db
 Z
 *src/coplet/ConvertDoubleSpaceToSingle.java,7/8/7822e304a63f591d536c9f73a791cf9f526dc180
 J
@@ -103,8 +101,6 @@ N
 src/coplet/ReadVertically.java,3/7/37c8848609b3784aa7784521248f017af1b2e09a
 O
 src/coplet/SuperIncreasing.java,d/7/d75aba749c4c7f6a05173aa04cf4469e6fe9429b
-F
-src/coplet/Modulo.java,5/c/5c5c5d1f31b07c1ffaff42a4a5d83e501f9ed646
 G
 src/baek/baek_9012.java,8/e/8eeedce205050d11026e94af5b5f43798fd26077
 U
