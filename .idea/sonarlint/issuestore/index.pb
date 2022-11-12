@@ -147,3 +147,9 @@ I
 src/coplet/Fibonacci.java,0/0/00f631d5cb696da6d74970528b17f938ebcf1571
 J
 src/coplet/IsSubsetOf.java,0/3/03c80514b0c67be412e9f93eae586d99105efc29
+E
+src/coplet/Power.java,1/d/1d72f268b8f1df071736ef518b6be85c4f65f4b7
+G
+src/coplet/TreeDFS.java,a/2/a2eb1d0994308dedc018e76b21361f7aa915d132
+G
+src/coplet/TreeBFS.java,f/b/fbd0efc64d2d57dff27c0315105403874d322c68
