@@ -13,8 +13,6 @@ public class QuickSort {
         while (left <= right) {
             int pivot = arr[arr.length / 2];
 
-
-
         }
     }
 }
