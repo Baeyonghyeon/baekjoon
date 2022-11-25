@@ -4,6 +4,7 @@ public class ABCheck {
     public static void main(String[] args) {
         boolean output = ABCheck("aMAJ7sBrO4CyysuoHFrgGTX");
         System.out.println(output); // --> true
+
     }
 
     public static boolean ABCheck(String str) {

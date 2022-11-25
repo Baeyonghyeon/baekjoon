@@ -95,8 +95,6 @@ N
 src/coplet/RemoveExtremes.java,2/f/2fbd59a1d94b6e61d4aa9cee12c40d58a0385ec7
 Q
 !src/coplet/RockScissorsPaper.java,4/3/43dd4ca2bacc95204e06bd243ec49701867d231a
-G
-src/coplet/ABCheck.java,9/5/957bc458924757e59088330f1090998872faf312
 N
 src/coplet/ReadVertically.java,3/7/37c8848609b3784aa7784521248f017af1b2e09a
 O
