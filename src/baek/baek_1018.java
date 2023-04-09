@@ -1,50 +1,63 @@
 package baek;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class baek_1018 {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int min = 64;
 
-        int count = 0;
-        int M = scan.nextInt(); //행
-        int N = scan.nextInt(); //열
-        String chess[][] = new String[M][N];
-        String[] str = new String[M]; //문자열
+        char[][] chessBoard = new char[N][M];
 
-        for(int i=0; i<M; i++){
-            str[i] = scan.nextLine();
-        }
-
-        for(int j=0; j<str.length; j++){
-            System.out.println(str[j]);
-        }
-/*
-
-        for(int i=0 ; i<M; i++){
-            for(int j=0; j<N; j++){
-                chess[i][j] = String.(str[i].charAt(N)); //2차원 배열에 한글자씩 넣어준다.
-                System.out.print(chess[i][j]);
+        for (int i = 0; i < N; i++) {
+            String tokenLine = br.readLine();
+            for (int j = 0; j < M; j++) {
+                chessBoard[i][j] = tokenLine.charAt(j);
             }
-            System.out.println();
         }
-*/
-        /*
-            여기부터는 체스 찾기
-            String ob = chess[0][0];
 
-        for(int i =0; i<M-8; i++){
-            for(int j=0; j<N-8; j++){
-                if(ob.equals('W')){
-                    if(ob.equals(chess[i][j])){
-                        continue;
-                    }
-                }else {
-                    if
+        for (int i = 0; i < N - 7; i++) {
+            for (int j = 0; j < M - 7; j++) {
+                min = Math.min(min, bruteForce(chessBoard, i, j));
+            }
+        }
+
+        System.out.println(min);
+
+        br.close();
+    }
+
+    public static int bruteForce(char[][] chessBoard, int N, int M) {
+        int count = 0;
+        char first = 'W';
+
+        for (int i = N; i < N + 8; i++) {
+            for (int j = M; j < M + 8; j++) {
+                if (first != chessBoard[i][j]) {
+                    count++;
+                }
+
+                if (first == 'W') {
+                    first = 'B';
+                } else {
+                    first = 'W';
                 }
             }
-        }
-         */
 
+            if (first == 'W') {
+                first = 'B';
+            } else {
+                first = 'W';
+            }
+        }
+
+        return Math.min(count, 64 - count);
     }
 }

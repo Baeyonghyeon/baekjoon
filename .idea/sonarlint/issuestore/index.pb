@@ -17,8 +17,6 @@ c
 3src/htmlStudy/day5/국내코로나/Covid19Sido.html,a/e/ae4f616bcecb395103abe3876eefc580c2b27c3c
 L
 src/htmlStudy/day1/Test.html,4/8/4848d8806f9fc23f1dc50e9b6f120d7edd9f9f5a
-G
-src/baek/baek_1085.java,5/6/56e4d852d9254f88408c0eabf3ec140d11a205fb
 S
 #src/htmlStudy/day3/homeWork/test.js,0/d/0da11a1d36cd751f7faaf1e53a6b001d61466e03
 T
@@ -111,8 +109,6 @@ P
  src/coplet/FilterOddNumbers.java,2/1/21c1677477b532eb76114c8bff970c4b995d7f18
 Q
 !src/coplet/ComputeSquareRoot.java,4/4/449050a648203eba9eca5acecdd3e78b1d275e36
-=
-src/Test.java,a/8/a862b92d10f810e224187403c322cb8e01f5e244
 L
 src/coplet/NumberSearch.java,c/6/c68aed5b9270115420b8bf120cd3e5b739e20d6a
 S
@@ -151,3 +147,9 @@ G
 src/coplet/TreeDFS.java,a/2/a2eb1d0994308dedc018e76b21361f7aa915d132
 G
 src/coplet/TreeBFS.java,f/b/fbd0efc64d2d57dff27c0315105403874d322c68
+G
+src/baek/baek_7576.java,9/b/9b21ab6108e34ae0c1a2d247a841003a58014593
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+G
+src/coplet/ABCheck.java,9/5/957bc458924757e59088330f1090998872faf312
