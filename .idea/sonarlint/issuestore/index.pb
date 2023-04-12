@@ -163,8 +163,6 @@ G
 src/baek/baek_1009.java,d/0/d017c82e686c03f704465c67120734b7659527d8
 G
 src/baek/baek_1011.java,5/4/54b7fb9c674dc975617055c0e8a8c4d5da74ff30
-G
-src/baek/baek_1012.java,0/7/0700491bcaa2b5a0dc3b4a12e2d0116f45c186c0
 B
 src/TEST/Test.java,6/b/6b76b0414c4f9f06cf3235ded5247acb8230720b
 G
