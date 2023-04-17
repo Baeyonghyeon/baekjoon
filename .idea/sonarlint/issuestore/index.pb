@@ -75,8 +75,6 @@ H
 src/coplet/testmain.java,9/8/98fd22ec6170cd359da8b4e525eb3dccb1540dbd
 F
 src/coplet/Change.java,2/a/2a133774823c5f51b3b6dbda599ff429768d9512
-G
-src/baek/baek_1260.java,a/7/a75e2d09b661e94102e03c8e797cc7e9ff344836
 S
 #src/coplet/ConvertListToObject.java,1/c/1c641f44ef9cf4750acaa9039a49aeba3e6c35b5
 I
