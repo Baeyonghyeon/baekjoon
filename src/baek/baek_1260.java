@@ -6,28 +6,28 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class baek_1260 {
-    public static StringBuilder sb = new StringBuilder();
-    public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
-    public static boolean visit[];
+    static StringBuilder sb = new StringBuilder();
+    static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
+    static boolean[] visit;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String token1[] = br.readLine().split(" ");
-        int N = Integer.parseInt(token1[0]); //정점의 개수
-        int M = Integer.parseInt(token1[1]); //간선의 개수
-        int V = Integer.parseInt(token1[2]); //탐색을 시작할 번호
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken()); //정점의 개수
+        int M = Integer.parseInt(st.nextToken()); //간선의 개수
+        int V = Integer.parseInt(st.nextToken()); //탐색을 시작할 번호
         
 
         for (int i = 0; i < N + 1; i++) {
-            graph.add(new ArrayList<Integer>());
+            graph.add(new ArrayList<>());
         }
         visit = new boolean[N + 1];
 
         //edge넣기
         while (M-- > 0) {
-            String token2[] = br.readLine().split(" ");
-            int x = Integer.parseInt(token2[0]);
-            int y = Integer.parseInt(token2[1]);
+            st = new StringTokenizer(br.readLine(), " ");
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
             put(x, y);
         }
         //값이 순서대로 들어가지 않아 정렬해줌
