@@ -1,57 +1,50 @@
 package baek;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class baek_11660 {
     /**
-     * N = 배열 크기
-     * M = 합 구하는 횟수
-     *
-     * 입력값 공백 구분
+     * 시간 복잡도 : O(N*N + M)
      */
-    public static void main(String[] args) throws NumberFormatException, IOException {
-        StringTokenizer st;
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        st = new StringTokenizer(br.readLine(), " ");
-
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        int Number [][] = new int [N+1][N+1];
-        int D [][] = new int [N+1][N+1];
+        int[][] ary = new int[N + 1][N + 1];
+        int[][] sum = new int[N + 1][N + 1];
 
-        // 입력
-        for(int i = 1 ; i <= N ; i++) {
+        for (int i = 1; i < N + 1; i++) {
             st = new StringTokenizer(br.readLine(), " ");
-            for(int j = 1 ; j <= N ; j++) {
-                Number[i][j] = Integer.parseInt(st.nextToken());
+            for (int j = 1; j <= N; j++) {
+                ary[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
-        // 점화식을 이용한 계산
-        // D 와 Number 를 같이 사용해도 무방함
-        for(int i = 1 ; i <= N ; i++) {
-            for(int j = 1 ; j <= N ; j++) {
-                D[i][j] = Number[i][j] + D[i-1][j] + D[i][j-1] - D[i-1][j-1];
+        //점화식 사용
+        for (int i = 1; i < N + 1; i++) {
+            for (int j = 1; j <= N; j++) {
+                sum[i][j] = sum[i - 1][j] + sum[i][j - 1] + ary[i][j] - sum[i - 1][j - 1];
             }
         }
 
-        // 정답찾기
-        int x1, y1, x2, y2, Answer;
-        for(int i = 1 ; i <= M ; i++) {
+        for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine(), " ");
-            x1 = Integer.parseInt(st.nextToken());
-            y1 = Integer.parseInt(st.nextToken());
-            x2 = Integer.parseInt(st.nextToken());
-            y2 = Integer.parseInt(st.nextToken());
-            Answer = D[x2][y2] - D[x1 - 1][y2] - D[x2][y1 - 1] + D[x1 - 1][y1 -1];
-            bw.write(Answer + "\n");
-        }
-        bw.flush();
-        bw.close();
+            int x1 = Integer.parseInt(st.nextToken());
+            int y1 = Integer.parseInt(st.nextToken());
+            int x2 = Integer.parseInt(st.nextToken());
+            int y2 = Integer.parseInt(st.nextToken());
 
+            int result = sum[x2][y2] - sum[x2][y1-1] - sum[x1-1][y2] + sum[x1-1][y1-1];
+
+            sb.append(result).append("\n");
+        }
+
+
+        System.out.println(sb);
     }
 }
