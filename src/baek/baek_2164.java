@@ -17,13 +17,15 @@ public class baek_2164 {
         }
 
         //문제처럼 진행한다면 N의 범위가 너무 넓기 때문에 인덱스를 당기다보면 시간초과가 난다.
-        //cnt를 사용해 인덱스를 당기지 않고 구현하였다. 하지만 아래처럼 구현한다면 메모리를 많이 사용하게 된다.
+        // -> LinkedList 를 사용하면 시간초과 없이 구현 가능합니다.
+
         while (true) {
             if (queue.size() == 1){
                 break;
             }
             cnt++;
             queue.add(queue.get(cnt++));
+            System.out.println(queue);
             if (queue.size() - 1 == cnt) break;
         }
 
