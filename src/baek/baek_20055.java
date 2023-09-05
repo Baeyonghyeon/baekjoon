@@ -1,0 +1,24 @@
+package baek;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class baek_20055 {
+    static boolean[] robot;
+    static int[] map;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine());
+        robot = new boolean[(n * 2) + 1];
+        map = new int[(n * 2) + 1];
+
+
+
+    }
+}
