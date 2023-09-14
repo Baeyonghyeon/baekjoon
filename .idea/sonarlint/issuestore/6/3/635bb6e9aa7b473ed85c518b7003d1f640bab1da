@@ -23,5 +23,4 @@ java:S1197"*Move the array designators [] to the type.(Å¶è¼
 java:S1197"*Move the array designators [] to the type.(šöûÏ
 E
 java:S1197"*Move the array designators [] to the type.(€²Õ‚ùÿÿÿÿ
-S	java:S106!"9Replace this use of System.out or System.err by a logger.(Í™èòøÿÿÿÿ
 c	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÐÎƒ‘
