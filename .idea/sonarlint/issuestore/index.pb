@@ -355,3 +355,13 @@ G
 src/baek/baek_1167.java,9/a/9a6fcd555083bf2db14027795304f35340e26e8e
 H
 src/baek/baek_20006.java,4/0/405b6d3d0192a29aed308aed51a8f4f186f78810
+G
+src/baek/baek_1924.java,b/3/b377f0c7c5ebd6aa79cdd7cf1b4224ec29ccf387
+G
+src/baek/baek_1753.java,0/9/093bb80a8a9126979d4cfe0e2374bb367ebde114
+9
+	Study.iml,2/0/207bcedb441461a404bd51523f46dcad27e12351
+w
+G.idea/sonarlint/issuestore/9/b/9b21ab6108e34ae0c1a2d247a841003a58014593,c/4/c4a6b7e83170179eabe208747c6e3b8b8f7c904c
+G
+src/baek/baek_1920.java,2/f/2f363db70e2b91794448b71f6b0fcc0f3badda2e
