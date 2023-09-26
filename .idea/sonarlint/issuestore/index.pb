@@ -365,3 +365,9 @@ w
 G.idea/sonarlint/issuestore/9/b/9b21ab6108e34ae0c1a2d247a841003a58014593,c/4/c4a6b7e83170179eabe208747c6e3b8b8f7c904c
 G
 src/baek/baek_1920.java,2/f/2f363db70e2b91794448b71f6b0fcc0f3badda2e
+G
+src/baek/baek_2343.java,5/9/594e1490c8d8ee0b11ed29dd59eb6797c9baa329
+G
+src/baek/baek_1463.java,a/8/a8a7f5e3055d6e7f09fcb320877720b07ecacddb
+G
+src/baek/baek_1300.java,1/0/10eea72fd0ac843dd2c6c30fe4d63891c06dd13f
