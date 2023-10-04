@@ -10,6 +10,7 @@ public class baek_1011 {
         int T = in.nextInt();    // 테스트 케이스
 
         for (int i = 0; i < T; i++) {
+            kjdkfjk
 
             int X = in.nextInt();
             int Y = in.nextInt();
