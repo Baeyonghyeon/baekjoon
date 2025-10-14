@@ -3,28 +3,24 @@ package baek;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class baek_10989 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        int countlist[] = new int[10001]; // 0 ~ 10000
+        int n = Integer.parseInt(br.readLine());
+        List<Queue<Integer>> list = new ArrayList<>();
 
-        // 배열 카운팅
-        for (int i = 0; i < N; i++) {
-            int input = Integer.parseInt(br.readLine());
-            countlist[input]++;
+        for (int i = 0; i < 10; i++) {
+            Queue<Integer> q = new LinkedList<>();
+            list.add(q);
         }
 
-        StringBuilder sb = new StringBuilder();
 
-        for (int i = 1; i < 10001; i++) {
-            while (countlist[i] > 0){
-                sb.append(i).append('\n');
-                countlist[i]--;
-            }
-        }
 
-        System.out.println(sb);
+
     }
 }

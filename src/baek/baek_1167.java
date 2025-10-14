@@ -6,99 +6,84 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class baek_1167 {
+
+    static List<List<int[]>> graph = new ArrayList<>();
     static boolean[] visit;
-    static int[] distance;
-    static List<List<Graph>> list = new ArrayList<>();
+    static int[] count;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int v = Integer.parseInt(br.readLine());
-        visit = new boolean[v + 1];
-        distance = new int[v + 1];
-        for (int i = 0; i < v + 1; i++) {
-            list.add(new ArrayList<>());
+        int max = 0;
+
+        for (int i = 0; i <= v; i++) {
+            List<int[]> node = new ArrayList<>();
+            graph.add(node);
         }
-        for (int i = 1; i < v + 1; i++) {
+
+        for (int i = 1; i <= v; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            while (true) {
-                int vertex = Integer.parseInt(st.nextToken());
-                if (vertex == -1) {
+            int parentNode = Integer.parseInt(st.nextToken());
+            List<int[]> node = graph.get(parentNode);
+
+            while (st.hasMoreElements()) {
+                int nodeNum = Integer.parseInt(st.nextToken());
+                if (nodeNum == -1) {
                     break;
+                } else {
+                    int direct = Integer.parseInt(st.nextToken());
+                    node.add(new int[]{nodeNum, direct});
                 }
-                int edge = Integer.parseInt(st.nextToken());
-                list.get(a).add(new Graph(vertex, edge));
             }
         }
 
-//        for (int i = 0; i < v + 1; i++) {
-//            System.out.println(i + " " + list.get(i));
-//        }
+        int maxIndex = 0;
+
+        count = new int[v + 1];
+        visit = new boolean[v + 1];
 
         BFS(1);
 
-        int max = 1;
-        for (int i = 2; i < v + 1; i++) {
-            if (distance[max] < distance[i]) {
-                max = i;
+//        System.out.println("test 1 : " + Arrays.toString(count));
+        for (int j = 1; j < count.length; j++) {
+            if (max < count[j]) {
+                max = count[j];
+                maxIndex = j;
             }
         }
 
+        count = new int[v + 1];
         visit = new boolean[v + 1];
-        distance = new int[v + 1];
-        BFS(max);
+        BFS(maxIndex);
 
-        System.out.println(Arrays.stream(distance).max().getAsInt());
+        max = 0;
+        for (int value : count) {
+            max = Math.max(max, value);
+        }
+//        System.out.println("test 2 : " + Arrays.toString(count));
 
+        System.out.println(max);
     }
 
-    private static void BFS(int n) {
+    static void BFS(int node) {
         Queue<Integer> q = new LinkedList<>();
-        q.offer(n);
-        visit[n] = true;
+        q.offer(node);
+        visit[node] = true;
 
         while (!q.isEmpty()) {
-//            System.out.println(Arrays.toString(distance));
-            int nowNode = q.poll();
-            for (Graph loop : list.get(nowNode)) {
-                int vertex = loop.getVertex();
-                int edge = loop.getEdge();
+            int getNode = q.poll();
 
-                if (!visit[vertex]) {
-                    distance[vertex] = distance[nowNode] + edge;
-                    q.offer(vertex);
-                    visit[vertex] = true;
+            for (int[] getV : graph.get(getNode)) {
+                int connectNode = getV[0];
+                int distance = getV[1];
+
+                if (!visit[connectNode]) {
+                    q.offer(connectNode);
+                    visit[connectNode] = true;
+                    count[connectNode] = count[getNode] + distance;
                 }
             }
         }
 
-        // list 에 담겨 있는 vertext가 visit에 false가 되어있다면 넣으면 안된다. 메소드 분리를 해야할듯.
-
-    }
-
-    static class Graph {
-        final int vertex;
-        final int edge;
-
-        public Graph(int vertex, int edge) {
-            this.vertex = vertex;
-            this.edge = edge;
-        }
-
-        public int getVertex() {
-            return vertex;
-        }
-
-        public int getEdge() {
-            return edge;
-        }
-
-        @Override
-        public String toString() {
-            return "Graph{" +
-                    "vertex=" + vertex +
-                    ", edge=" + edge +
-                    '}';
-        }
     }
 }

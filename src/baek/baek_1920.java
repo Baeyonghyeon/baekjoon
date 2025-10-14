@@ -8,54 +8,40 @@ import java.util.StringTokenizer;
 
 public class baek_1920 {
 
-    static int[] list;
-    static int[] search;
-
+    static boolean[] targets;
+    static int[] a;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        list = new int[n];
         StringTokenizer st = new StringTokenizer(br.readLine());
+        targets = new boolean[n + 1];
         for (int i = 0; i < n; i++) {
-            list[i] = Integer.parseInt(st.nextToken());
+            int target = Integer.parseInt(st.nextToken());
+            targets[target] = true;
         }
+
         int m = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
-        search = new int[m];
         for (int i = 0; i < m; i++) {
-            search[i] = Integer.parseInt(st.nextToken());
+            a[i] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(list);
+        Arrays.sort(a);
 
-        for (int j = 0; j < m; j++) {
-            boolean bl = true;
-            int start = 0;
-            int end = n-1;
 
-            while (start <= end) {
-                int target = (end + start) >> 1;
+    }
 
-                if (list[target] == search[j]) {
-                    sb.append(1);
-                    bl = false;
-                    break;
-                }
-                if (list[target] > search[j]) {
-                    end = target - 1;
-                }
-                if (list[target] < search[j]) {
-                    start = target + 1;
-                }
+    static boolean binarySearch(int start, int end, int target) {
+        int mid = (start + end) / 2;
+
+        while (start <= end) {
+            if(a[mid] > target) {
+                end = mid;
+            } else {
+                start = mid+1;
             }
-
-            if (bl) {
-                sb.append(0);
-            }
-            sb.append("\n");
         }
 
-        System.out.println(sb);
+        return true;
     }
 }

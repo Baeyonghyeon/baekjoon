@@ -9,22 +9,37 @@ import java.util.Comparator;
 public class baek_1377 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        int[][] ary = new int[N][2];
+        int n = Integer.parseInt(br.readLine());
+        Node[] nodes = new Node[n];
 
-        for (int i = 0; i < N; i++) {
-            ary[i][0] = Integer.parseInt(br.readLine());
-            ary[i][1] = i;
+        for (int i = 0; i < n; i++) {
+            int value = Integer.parseInt(br.readLine());
+            nodes[i] = new Node(i, value);
         }
 
-        Arrays.sort(ary, Comparator.comparingInt((int[] o) -> o[0]));
+        Arrays.sort(nodes);
 
         int max = 0;
-
-        for (int i = 0; i < N; i++) {
-            max = Math.max(max, ary[i][1] - i + 1);
+        for (int i = 0; i < n; i++) {
+            int diff = nodes[i].index - i;
+            max = Math.max(max, diff);
         }
 
-        System.out.println(max);
+        System.out.println(max + 1);
+    }
+}
+
+class Node implements Comparable<Node>{
+    int index;
+    int value;
+
+    public Node(int index, int value) {
+        this.index = index;
+        this.value = value;
+    }
+
+    @Override
+    public int compareTo(Node o) {
+        return this.value - o.value;
     }
 }

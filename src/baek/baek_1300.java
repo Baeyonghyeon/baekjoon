@@ -5,30 +5,35 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class baek_1300 {
+
+    static int n;
+    static int k;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        int K = Integer.parseInt(br.readLine());
+        n = Integer.parseInt(br.readLine());
+        k = Integer.parseInt(br.readLine());
+        int result = binarySearch(1, k);
 
-        long lo = 1;
-        long hi = K;
+        System.out.println(result);
+    }
 
-        while (lo < hi) {
-            long mid = (lo + hi) / 2;
-            long count = 0;
-
-            for (int i = 1; i <= N; i++) {
-                count += Math.min(mid / i, N);
+    private static int binarySearch(int start, int end) {
+        while (start < end) {
+            int mid = (start + end) / 2;
+            int count = 0;
+            for (int i = 1; i <= n; i++) {
+                count += Math.min(mid / i, n);
             }
 
-            if (K <= count) {
-                hi = mid;
+            if (count < k) {
+                start = mid + 1;
             } else {
-                lo = mid + 1;
+                end = mid;
             }
 
         }
 
-        System.out.println(lo);
+        return end;
     }
 }

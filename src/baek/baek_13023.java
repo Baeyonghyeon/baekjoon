@@ -5,60 +5,66 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class baek_13023 {
-    static ArrayList<Integer>[] arrayLists;
+
+    static List<List<Integer>> graph = new ArrayList<>();
     static boolean[] visit;
-    static boolean arrive = false;
+    static boolean isFriend;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
-        arrayLists = new ArrayList[N + 1];
-        visit = new boolean[N + 1];
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
+        visit = new boolean[n];
 
-        for (int i = 0; i < N; i++) {
-            arrayLists[i] = new ArrayList<>();
+        // 양방향 노선을 만든후 n ^ 2 계산 방식으로 DFS 를 구성하면 될거같음.
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>());
         }
 
-        for (int i = 0; i < M; i++) {
+        for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
+            int node = Integer.parseInt(st.nextToken());
+            int direct = Integer.parseInt(st.nextToken());
 
-            arrayLists[a].add(b);
-            arrayLists[b].add(a);
+            graph.get(node).add(direct);
+            graph.get(direct).add(node);
         }
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             DFS(i, 1);
 
-            if (arrive) {
-                break;
-            }
+            if (isFriend) break;
         }
 
-        int result = arrive ? 1 : 0;
-        System.out.println(result);
+        if (isFriend) System.out.println(1);
+        else System.out.println(0);
+
     }
 
-    private static void DFS(int value, int count) {
-        visit[value] = true;
-
-        if (count == 5) {
-            arrive = true;
+    static void DFS(int node, int count) {
+        if (count == 5 || isFriend) {
+            isFriend = true;
             return;
         }
 
-        for (int loop : arrayLists[value]) {
-            if (!visit[loop]) {
-                DFS(loop, count + 1);
+        if (!visit[node]) {
+            visit[node] = true;
+            for (int i = 0; i < graph.get(node).size(); i++) {
+                int getNode = graph.get(node).get(i);
+                if (!visit[getNode]) {
+                    DFS(getNode, count + 1);
+                    if (isFriend) {
+                        return; // 조기 종료
+                    }
+                }
             }
         }
 
-        visit[value] = false;
+        visit[node] = false;
     }
 }

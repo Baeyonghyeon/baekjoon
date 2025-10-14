@@ -27,45 +27,49 @@ public class baek_1517 {
     }
 
     private static void mergeSort(int start, int end) {
-        if (end - start < 1) {
-            return;
-        }
+        if (end - start < 1) return;
 
-        int mid = (start + end) / 2;
+        int mid = start + (end - start) / 2;
+
         mergeSort(start, mid);
         mergeSort(mid + 1, end);
 
+
+        // 정렬할 대상들 복사 배열에 원본값을 옮겨 담음.
         for (int i = start; i <= end; i++) {
             tmp[i] = ary[i];
         }
 
+        // k 값은 분할 후 합칠때 사용하는 변수
+        // start부터 차근차근 값을넣을거임
         int k = start;
         int index1 = start;
         int index2 = mid + 1;
+
         while (index1 <= mid && index2 <= end) {
             if (tmp[index1] > tmp[index2]) {
                 ary[k] = tmp[index2];
-                count = count + index2 - k;
-                k++;
+                count += index2 - k;
                 index2++;
+                k++;
             } else {
                 ary[k] = tmp[index1];
-                k++;
                 index1++;
+                k++;
             }
         }
 
+        // 한쪽 index 값들을 다 밀어 넣었다면 나머지 한쪽은 순서대로 밀어 넣기만 하면됨(이미 정렬이 되어 있으니까)
         while (index1 <= mid) {
             ary[k] = tmp[index1];
-            k++;
             index1++;
+            k++;
         }
 
         while (index2 <= end) {
             ary[k] = tmp[index2];
-            k++;
             index2++;
+            k++;
         }
     }
-
 }

@@ -3,40 +3,52 @@ package baek;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class baek_11003 {
-    public static void main(String[] args) throws IOException {
-        Deque<int[]> deque = new ArrayDeque<>();
+    public void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringTokenizer st = new StringTokenizer(br.readLine());
         StringBuilder sb = new StringBuilder();
+
         int N = Integer.parseInt(st.nextToken());
         int L = Integer.parseInt(st.nextToken());
-        st = new StringTokenizer(br.readLine(), " ");
+        st = new StringTokenizer(br.readLine());
+        Deque<Node> queue = new LinkedList<>();
 
-        deque.offerLast(new int[]{1, Integer.parseInt(st.nextToken())});
-        sb.append(deque.peekFirst()[1]).append(" ");
+        for (int i = 0; i < N; i++) {
+            Node node = new Node(i, Integer.parseInt(st.nextToken()));
 
-        for (int i = 2; i <= N; i++) {
-            int a = Integer.parseInt(st.nextToken());
-
-            while (!deque.isEmpty() && deque.peekLast()[1] > a) {
-                deque.pollLast();
+            if (queue.isEmpty()) {
+                queue.offerLast(node);
+            } else {
+                if (queue.peekLast().value < node.value) {
+                    queue.offerLast(node);
+                } else {
+                    while (!queue.isEmpty() && queue.peekLast().value > node.value) {
+                        queue.pollLast();
+                    }
+                    queue.offerLast(node);
+                }
             }
 
-            deque.offerLast(new int[]{i, a});
-
-            if(deque.peekFirst()[0] == i - L){
-                deque.pollFirst();
+            while (!queue.isEmpty() && queue.peekFirst().index < i - L + 1) {
+                queue.pollFirst();
             }
 
-
-            sb.append(deque.peekFirst()[1]).append(" ");
+            sb.append(queue.peekFirst().value).append(" ");
         }
 
         System.out.println(sb);
+    }
+
+    class Node {
+        int index;
+        int value;
+
+        public Node(int index, int value) {
+            this.index = index;
+            this.value = value;
+        }
     }
 }

@@ -7,29 +7,27 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class baek_11659 {
+
+    static int[] sum;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        int values[] = new int[N + 1];
-        int solution[] = new int[N + 1];
+        sum = new int[N+1];
+        st = new StringTokenizer(br.readLine());
 
-        st = new StringTokenizer(br.readLine(), " ");
-        for (int i = 1; i <= N; i++) {
-            values[i] = Integer.parseInt(st.nextToken());
-            solution[i] = values[i] + solution[i - 1];
+        for (int i = 1; i < N+1; i++) {
+            sum[i] = sum[i-1] + Integer.parseInt(st.nextToken());
         }
 
-        while (M-- > 0) {
-            st = new StringTokenizer(br.readLine(), " ");
-            int start = Integer.parseInt(st.nextToken());
-            int end = Integer.parseInt(st.nextToken());
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
 
-            sb.append(solution[end] - solution[start-1]).append("\n");
+            System.out.println(sum[b] - sum[a-1]);
         }
-
-        System.out.println(sb);
     }
 }

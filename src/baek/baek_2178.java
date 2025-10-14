@@ -1,63 +1,68 @@
 package baek;
 
+import javax.lang.model.type.ArrayType;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.StringTokenizer;
 
 public class baek_2178 {
-    static int N, M;
-    static int map[][];
-    static boolean visit[][];
-    static int dx[] = {-1, 1, 0, 0};
-    static int dy[] = {0, 0, -1, 1};
+
+    static int[] moveY = {-1, 1, 0, 0};
+    static int[] moveX = {0, 0, -1, 1};
+    static int[][] graph;
+    static boolean[][] visit;
+    static int n, m;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String token[] = br.readLine().split(" ");
-        N = Integer.parseInt(token[0]);
-        M = Integer.parseInt(token[1]);
-        map = new int[N][M];
-        visit = new boolean[N][M];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        n = Integer.parseInt(st.nextToken());
+        m = Integer.parseInt(st.nextToken());
+        graph = new int[n][m];
+        visit = new boolean[n][m];
 
-        for (int i = 0; i < N; i++) {
-            String token2[] = br.readLine().split("");
-            for (int j = 0; j < M; j++) {
-                map[i][j] = Integer.parseInt(token2[j]);
+        for (int i = 0; i < n; i++) {
+            String[] str = br.readLine().split("");
+            for (int j = 0; j < m; j++) {
+                graph[i][j] = Integer.parseInt(str[j]);
             }
         }
 
-        BFS(0, 0);
+        BFS(new int[]{0, 0});
 
-        System.out.println(map[N-1][M-1]);
-
+        System.out.println(graph[n - 1][m - 1]);
     }
 
-    public static void BFS(int x, int y) {
+    static void BFS(int[] node) {
         Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{x, y});
+        q.offer(node);
 
         while (!q.isEmpty()) {
-            x = q.peek()[0];
-            y = q.peek()[1];
-            visit[x][y] = true;
-
-            q.poll();
+            int[] pollNode = q.poll();
+            int y = pollNode[0];
+            int x = pollNode[1];
+            visit[y][x] = true;
 
             for (int i = 0; i < 4; i++) {
-                int ix = x + dx[i];
-                int iy = y + dy[i];
+                int yi = y + moveY[i];
+                int xi = x + moveX[i];
 
-                if (ix >= 0 && iy >= 0 && ix < N && iy < M) {
-                    if (map[ix][iy] != 0 && !visit[ix][iy]) {
-                        q.offer(new int[]{ix, iy});
-                        map[ix][iy] = map[x][y]+1;
-                        visit[ix][iy] = true;
+                if (xi >= 0 && yi >= 0 && xi < m && yi < n && !visit[yi][xi]) {
+                    if (graph[yi][xi] != 0) {
+                        q.offer(new int[]{yi, xi});
+                        graph[yi][xi] = graph[y][x] + 1;
+                        visit[yi][xi] = true;
                     }
                 }
             }
         }
+
     }
 
 }
+
+

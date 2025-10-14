@@ -3,58 +3,55 @@ package baek;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class baek_11724_2 {
 
-    static ArrayList<Integer>[] arrayLists;
+    static List<List<Integer>> graph = new ArrayList<>();
     static boolean[] visit;
+    static Stack<Integer> stack = new Stack<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int N = Integer.parseInt(st.nextToken()); //node
-        int M = Integer.parseInt(st.nextToken()); //edge
-        arrayLists = new ArrayList[N + 1];
-        visit = new boolean[N + 1];
+        int n = Integer.parseInt(st.nextToken());
+        int m = Integer.parseInt(st.nextToken());
 
-        for (int i = 0; i < N + 1; i++) {
-            arrayLists[i] = new ArrayList<>();
+        for (int i = 0; i <= n; i++) {
+            graph.add(new ArrayList<>());
         }
+        visit = new boolean[n + 1];
 
-        for (int i = 0; i < M; i++) {
-            st = new StringTokenizer(br.readLine(), " ");
-            int token1 = Integer.parseInt(st.nextToken());
-            int token2 = Integer.parseInt(st.nextToken());
+        for (int i = 0; i < m; i++) {
+            st = new StringTokenizer(br.readLine());
+            int node = Integer.parseInt(st.nextToken());
+            int indirect = Integer.parseInt(st.nextToken());
 
-            arrayLists[token1].add(token2);
-            arrayLists[token2].add(token1);
+            graph.get(node).add(indirect);
+            graph.get(indirect).add(node);
         }
 
         int count = 0;
-
-        for (int i = 1; i < N + 1; i++) {
-            if (!visit[i]) {
+        for (int i = 1; i <= n; i++) {
+            if(!visit[i]){
                 count++;
                 DFS(i);
             }
+
         }
 
         System.out.println(count);
     }
 
-    private static void DFS(int node) {
-        if (visit[node]) {
+    static void DFS(int value) {
+        if (visit[value]) {
             return;
         }
 
-        visit[node] = true;
-
-        for (int loop : arrayLists[node]) {
-            DFS(loop);
+        visit[value] = true;
+        for (int n : graph.get(value)) {
+            DFS(n);
         }
     }
 }

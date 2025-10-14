@@ -4,35 +4,46 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class baek_17298 {
-    static public Stack stack = new Stack<Integer>();
+
+    static int[] result;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int N = Integer.parseInt(br.readLine());
-        int ans[] = new int[N];
-        int list[] = new int[N];
-        String token[] = br.readLine().split(" ");
-        for(int i=0; i<N; i++){
-            list[i] = Integer.parseInt(token[i]);
+        int n = Integer.parseInt(br.readLine());
+        int[] nge = new int[n];
+        result = new int[n];
+
+        Stack<Integer> stack = new Stack<>();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < n; i++) {
+            nge[i] = Integer.parseInt(st.nextToken());
         }
 
-        for(int i=0; i<N; i++){
-            if(stack.empty()==true || list[(int) stack.peek()] >= list[i]){
+        for (int i = 0; i < n; i++) {
+            if (stack.isEmpty() || (nge[stack.peek()] > nge[i])) {
                 stack.push(i);
-            }else if(list[i] > list[(int) stack.peek()] ){
-                ans[(int) stack.pop()] = list[i];
-                i--;
+            } else {
+                while (!stack.isEmpty()) {
+                    if (nge[stack.peek()] < nge[i]) {
+                        int index = stack.pop();
+                        result[index] = nge[i];
+                    } else {
+                        break;
+                    }
+                }
+                stack.push(i);
+
             }
         }
-        for( Object loop : stack){
-            int a = (int) loop;
-            ans[a] = -1;
-        }
 
-        for( int i =0; i<ans.length; i++){
-            sb.append(ans[i]).append(" ");
+        for (int i = 0; i < n; i++) {
+            if (result[i] == 0) sb.append(-1).append(" ");
+            else sb.append(result[i]).append(" ");
         }
 
         System.out.println(sb);

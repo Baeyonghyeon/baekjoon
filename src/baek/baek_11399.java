@@ -9,24 +9,24 @@ import java.util.StringTokenizer;
 public class baek_11399 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
+        int n = Integer.parseInt(br.readLine());
+        int[] ary = new int[n];
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int[] ary = new int[N];
-
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             ary[i] = Integer.parseInt(st.nextToken());
         }
 
         Arrays.sort(ary);
-
-        int result = 0;
-        int sum = 0;
-        for (int loop : ary) {
-            sum += loop;
-            result += sum;
+        for (int i = 1; i < n; i++) {
+            ary[i] = ary[i - 1] + ary[i];
         }
 
-        System.out.println(result);
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += ary[i];
+        }
+
+        System.out.println(sum);
     }
 }

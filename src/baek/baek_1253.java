@@ -10,43 +10,39 @@ public class baek_1253 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        int[] ary = new int[N];
+        int[] arr = new int[N];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
         for (int i = 0; i < N; i++) {
-            ary[i] = Integer.parseInt(st.nextToken());
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(ary);
+        Arrays.sort(arr);
 
-        int cnt = 0;
-        for (int i = N - 1; i >= 0; i--) {
-            int target = ary[i];
+        int count = 0;
+
+        for (int i = 0; i < N; i++) {
+            int target = arr[i];
             int start = 0;
-            int end = N-1;
+            int end = N - 1;
 
             while (start < end) {
-                if(start == i){
-                    start++;
-                }
-                if(end == i){
-                    end--;
-                }
-                if(start >= end){
-                    break;
-                }
-
-                int sum = ary[start] + ary[end];
-                if (target < sum) {
-                    end--;
-                } else if (target > sum) {
+                if (arr[start] + arr[end] == target) {
+                    if (i != start && i != end) {
+                        count++;
+                        break;
+                    } else {
+                        if (i == start) start++;
+                        if (i == end) end--;
+                    }
+                } else if (arr[start] + arr[end] < target) {
                     start++;
                 } else {
-                    cnt++;
-                    break;
+                    end--;
                 }
             }
         }
 
-        System.out.println(cnt);
+        System.out.println(count);
     }
 }
